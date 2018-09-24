@@ -3,21 +3,18 @@
     "version": "1.0.0",
     "description": "electron application with spectrum",
     "private": true,
-    "main": "./dist/main.js",
-    "bin": "./dist/main.js",
+    "main": "./dist/electron/main.js",
+    "bin": "./dist/electron/main.js",
     "scripts": {
-        "ng": "ng",
-        "start": "ng serve",
-        "build": "ng build",
-        "test": "ng test",
+        "build": "tsc",
         "lint": "ng lint",
-        "e2e": "ng e2e",
-        "electron": "electron .",
-        "electron-build": "ng build --prod && electron ."
+        "start": "electron ./dist/electron/main.js"
     },
     "author": "abhishek gangwar",
     "license": "ISC",
     "devDependencies": {
+        "@types/node": "^10.10.3",
+        "@types/selenium-webdriver": "^3.0.10",
         "electron": "^3.0.0"
     },
     "dependencies": {

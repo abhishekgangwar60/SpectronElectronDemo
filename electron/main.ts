@@ -1,7 +1,9 @@
 import { BrowserWindow, app } from 'electron';
+import * as url from 'url';
+import * as path from 'path';
 
 // making this variable global to protect window from closing automatically at the time of garbage collection.
-let mainWindow: Electron.BrowserWindow;
+let mainWindow: Electron.BrowserWindow | null;
 
 function createWindow() {
     // Create the browser window.
@@ -15,7 +17,11 @@ function createWindow() {
     });
 
 
-    mainWindow.loadURL(`file://${__dirname}/dist/index.html`);
+    mainWindow.loadURL(url.format({
+        pathname: path.join(__dirname, './../SpectrumDemo/index.html'),
+        protocol: 'file:',
+        slashes: true
+    }));
 
     // Event when the window is closed.
     mainWindow.on('closed', function () {
