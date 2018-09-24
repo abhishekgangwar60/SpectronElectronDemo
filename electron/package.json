@@ -1,0 +1,14 @@
+{
+  "name": "spectrum-electron-demo",
+  "version": "1.0.0",
+  "description": "electron application with spectrum",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "abhishek gangwar",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^3.0.0"
+  }
+}
