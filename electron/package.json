@@ -1,14 +1,26 @@
 {
-  "name": "spectrum-electron-demo",
-  "version": "1.0.0",
-  "description": "electron application with spectrum",
-  "main": "main.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "abhishek gangwar",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^3.0.0"
-  }
+    "name": "spectrum-electron-demo",
+    "version": "1.0.0",
+    "description": "electron application with spectrum",
+    "private": true,
+    "main": "./dist/main.js",
+    "bin": "./dist/main.js",
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e",
+        "electron": "electron .",
+        "electron-build": "ng build --prod && electron ."
+    },
+    "author": "abhishek gangwar",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^3.0.0"
+    },
+    "dependencies": {
+        "typescript": "^3.0.3"
+    }
 }
